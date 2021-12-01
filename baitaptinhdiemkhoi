@@ -1,0 +1,32 @@
+def nhapdiem(cacmon):
+    diem=[]
+    for i in range(len(cacmon)):
+        x=float(input('Nhập điểm môn '+cacmon[i]+': '))
+        diem.append(x)
+    return diem
+def diemkhoi(a,b,c):
+    return (a*2+b+c)*3/4
+#--------------------------------------------------------
+#Nhapdiem
+cacmon=['Toán','Lý','Hóa','Sinh','Văn','Sử','Địa','Anh']
+diem=nhapdiem(cacmon)
+#tinhdiemkhoi
+khoia=diemkhoi(diem[0],diem[1],diem[2])
+khoib=diemkhoi(diem[3],diem[0],diem[2])
+khoic=diemkhoi(diem[4],diem[5],diem[6])
+khoid=diemkhoi(diem[7],diem[0],diem[4])
+#timkhoicaonhat
+dskhoi=[khoia,khoib,khoic,khoid]
+print(dskhoi)
+diemmax=khoia
+for i in range(len(dskhoi)):
+    if dskhoi[i]>=dskhoi[0]:
+        diemmax=dskhoi[i]
+if diemmax==dskhoi[0]:
+    print('Ban nen thi khoi A')
+if diemmax==dskhoi[1]:
+    print('Ban nen thi khoi B')
+if diemmax==dskhoi[2]:
+    print('Ban nen thi khoi C')
+if diemmax==dskhoi[3]:
+    print('Ban nen thi khoi D') 
