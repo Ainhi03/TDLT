@@ -30,3 +30,4 @@ if diemmax==dskhoi[2]:
     print('Ban nen thi khoi C')
 if diemmax==dskhoi[3]:
     print('Ban nen thi khoi D') 
+print('ket thuc')
